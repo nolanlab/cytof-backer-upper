@@ -1,6 +1,8 @@
 cytof-backer-upper
 ==================
 
-Powershell script for incrementally backing up CyTOF data.
+Powershell script for incrementally backing up CyTOF data. Features compression of IMD files (only), interruptable-resumable backup operations and good logging.
 
-Version 2 provides support for resuming backup operations if the operation is terminated and is highly recommended. However, it has only been used by our lab for about two months, whereas version 1 has been used for a few years and is known to be stable.
+Use the latest _v3.ps1 file. (The previous versions were for earlier versions of PowerShell and Windows XP.)
+
+A known working configuration is WinSCP 5.5.6 and 7-Zip 9.20.
