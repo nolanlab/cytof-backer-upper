@@ -25,12 +25,12 @@ $sessionOptions = New-Object WinSCP.SessionOptions
 # SETTINGS
 $sessionOptions.Protocol = [WinSCP.Protocol]::Sftp
 $sessionOptions.FtpMode = [WinSCP.FtpMode]::Active
-$sessionOptions.HostName = "firedragon.stanford.edu"
-$sessionOptions.UserName = "cytofbackups"
-$sessionOptions.Password = "B200909-"
-$sessionOptions.SshHostKeyFingerprint = "ssh-rsa 2048 6b:2e:bf:ff:b9:89:94:80:cb:8e:aa:90:9a:0f:e5:2e"
+$sessionOptions.HostName = "yourserver"
+$sessionOptions.UserName = "username"
+$sessionOptions.Password = "password"
+$sessionOptions.SshHostKeyFingerprint = "ssh-rsa 2048 he:xs:tu:ff"
 $LocalDataPath = "E:\"
-$RemoteDataPath = "/backup/shared/nolanshare/CyTOF_Data_Archive/Joplin/"
+$RemoteDataPath = "/backup/"
 $LogPath = "C:\Users\CyTOF2-090\Desktop\Backup Logs\"
 
 # Begin script
