@@ -9,6 +9,7 @@ Compared to the three earlier versions, this version is simpler and relies more 
 - Displays a message after it's done syncing with the date that the sync was started.
 
 Install instructions:
+
 1. Setup a project in the Google Developers Console.
 1. Install Python 2.6.x or 2.7.x.
 1. Download gsutil from [here](https://storage.googleapis.com/pub/gsutil.zip) and extract to C:\.
