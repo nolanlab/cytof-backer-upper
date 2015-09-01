@@ -5,7 +5,7 @@ Python script for incrementally backing up CyTOF data to Google Cloud Storage.
 
 Compared to the three earlier versions, this version is simpler and relies more on gsutil's rsync-like functionality. It does not provide versioning like the previous scripts because that was essentially unused. If a file is modified after being backed up initially, the new version will replace whatever was previously backed up.
 
-- Compresses IMD files (only) and deletes the uncompressed IMD immediately after compression.
+- Compresses IMD files (only) and deletes the uncompressed IMD immediately after compression. **Caution: All tested versions of the CyTOF software will abort acquisition if *any* IMD is deleted while acquisition is in process.**
 - Displays a message after it's done syncing with the date that the sync was started.
 
 Install instructions:
