@@ -14,7 +14,7 @@ Compared to the three earlier versions, this version is simpler and relies heavi
 Install instructions:
 
 1. Setup a project in the Google Developers Console.
-1. Install Python 2.7.x (x86 or x64, doesn't matter).
+1. Install Python 2.7.x (x86 or x64, doesn't matter) -- e.g. https://www.python.org/ftp/python/2.7.10/python-2.7.10.msi. **Important: During the installation, make sure you select "Add Python to the path."**
 1. Download gsutil from [here](https://storage.googleapis.com/pub/gsutil.zip) and extract to C:\.
 1. Configure access to Google cloud by running `python C:\gsutil\gsutil config` and following the prompts. When prompted for the project name, enter the name of the project from step 1.
 1. Install 7zip (e.g. this: http://www.7-zip.org/a/7z1506-x64.exe). Note the install location (typically $env:ProgramFiles\7-Zip\7z.exe).
