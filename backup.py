@@ -32,7 +32,7 @@ for f in imd_files:
 
 # Run rsync, excluding .imd files
 start_date = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-return_value = call(["python", gsutil, "-m", "rsync", "-x", ".*\.imd", "-r", local_data_path, "gs://{0}".format(bucket_name)])
+return_value = call(["python", gsutil, "-m", "rsync", "-x", ".*\.imd$", "-r", local_data_path, "gs://{0}".format(bucket_name)])
 if return_value != 0:
   cytpes.windll.user32.MessageBoxA(0, "rsync exited with code {0}".format(return_value), "CyTOF backups", 0)
 else:
