@@ -7,12 +7,13 @@ import datetime
 import fnmatch
 
 sz = r"C:\\Program Files\\7-Zip\\7z.exe"
-gsutil = r"C:\\gsutil\\gsutil"
+gsutil = r"C:\\Program Files (x86)\\Google\\Cloud SDK\\google-cloud-sdk\\bin\\bootstrapping\\gsutil.py"
 bucket_name = "janis_joplin"
 local_data_path = r"E:\\Data\\" # with trailing slash!
 ## IMPORTANT! Due to a bug in boto, you must have data in something
 ## like E:\Data\<month> instead of just E:\<month>. The first directory
 ## is ignored.
+## Update 2024 - not sure if that's still a relevant bug.
 
 # Scan local_data_path for .imd files
 imd_files = []
@@ -34,6 +35,6 @@ for f in imd_files:
 start_date = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 return_value = call(["python", gsutil, "-m", "rsync", "-x", ".*\.imd$", "-r", local_data_path, "gs://{0}".format(bucket_name)])
 if return_value != 0:
-  cytpes.windll.user32.MessageBoxA(0, "rsync exited with code {0}".format(return_value), "CyTOF backups", 0)
+  ctypes.windll.user32.MessageBoxA(0, "rsync exited with code {0}".format(return_value), "CyTOF backups", 0)
 else:
   ctypes.windll.user32.MessageBoxA(0, "Backups through {0} complete.".format(start_date), "CyTOF backups", 0)
