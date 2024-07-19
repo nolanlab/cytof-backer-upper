@@ -35,6 +35,6 @@ for f in imd_files:
 start_date = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 return_value = call(["python", gsutil, "-m", "rsync", "-x", ".*\.imd$", "-r", local_data_path, "gs://{0}".format(bucket_name)])
 if return_value != 0:
-  ctypes.windll.user32.MessageBoxA(0, "rsync exited with code {0}".format(return_value), "CyTOF backups", 0)
+  ctypes.windll.user32.MessageBoxA(0, str.encode("rsync exited with code {0}".format(return_value)), b"CyTOF backups", 0)
 else:
-  ctypes.windll.user32.MessageBoxA(0, "Backups through {0} complete.".format(start_date), "CyTOF backups", 0)
+  ctypes.windll.user32.MessageBoxA(0, str.encode("Backups through {0} complete.".format(start_date)), b"CyTOF backups", 0)
